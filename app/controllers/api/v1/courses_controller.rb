@@ -1,4 +1,4 @@
-class CoursesController < ApplicationController
+class Api::V1::CoursesController < ApplicationController
   include CoursesConcern
 
   # GET /courses with associated tutors

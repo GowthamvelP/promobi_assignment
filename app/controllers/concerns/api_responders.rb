@@ -17,11 +17,11 @@ module ApiResponders
     render status: status, json: construct_json(data, metadata, errors)
   end
 
-  def construct_json(metadata, data, errors)
+  def construct_json(data, metadata, errors)
     {
+      data: data || nil,
       metadata: metadata || {},
-      errors: errors || nil,
-      data: data || nil
+      errors: errors || nil
     }
   end
 end

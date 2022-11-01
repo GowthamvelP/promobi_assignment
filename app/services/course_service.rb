@@ -5,6 +5,6 @@ class CourseService
   end
 
   def create_course
-    @course.save
+    [@course.save, @course]
   end
 end

@@ -2,7 +2,6 @@ module ApiExceptions
   extend ActiveSupport::Concern
 
   included do
-    protect_from_forgery
 
     rescue_from StandardError, with: :handle_api_exception
 
