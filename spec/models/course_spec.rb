@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Course, type: :model do
+  describe '#associations' do
+    it { should have_many(:tutors) }
+  end
+
   describe '#validations' do
     context 'validate title' do
       it 'should validate uniqueness of title' do
